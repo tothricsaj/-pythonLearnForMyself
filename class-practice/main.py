@@ -30,6 +30,8 @@ class Teacher(Person, ClassLeader):
         ClassLeader.__init__(self, sum_class_members, class_specialized, is_class_leader)
         self.teached_subject = teached_subject
 
+        self.__my_private = 'This is only mine!'
+
     def get_details(self):
         print('This person is a teacher!')
         Person.get_details(self)
@@ -37,6 +39,16 @@ class Teacher(Person, ClassLeader):
 
         if self.is_class_leader:
             ClassLeader.get_cl_details(self)
+
+    @property
+    def my_private(self):
+        return self.__my_private
+
+    @my_private.setter
+    def my_private(self, val):
+        self.__my_private = val
+
+
 
 if __name__ == "__main__":
     
@@ -52,3 +64,10 @@ if __name__ == "__main__":
 
     per3 = Teacher('Solder Sam', 43, 'Sport', 21, 'Engilsh', True)
     per3.get_details()
+
+    print(per3.my_private)
+
+    per3.my_private = 'NO, it is for everybody!!!'
+    print(per3.my_private)
+
+
