@@ -10,6 +10,14 @@ class Person:
         print('Name is {}'.format(self.name))
         print('Age is {}'.format(self.age))
 
+    @classmethod
+    def my_class_method(self, clsName):
+        print('I am a class method....{}'.format(clsName))
+
+    @staticmethod
+    def my_static_method():
+        print('I am a static-method!!!!')
+
 
 
 class ClassLeader:
@@ -54,16 +62,23 @@ if __name__ == "__main__":
     
     per1 = Person('Jhon Doo', 22)
     per1.get_details();
+    per1.my_class_method('per1')
+
+    Person.my_static_method()
 
     print('\n')
 
     per2 = Teacher('Frank Einstein', 70, 'Biology', None, None, False)
     per2.get_details()
+    per2.my_class_method('per2')
+
+    Teacher.my_static_method()
 
     print('\n')
 
     per3 = Teacher('Solder Sam', 43, 'Sport', 21, 'Engilsh', True)
     per3.get_details()
+    per3.my_class_method('per3')
 
     print(per3.my_private)
 
