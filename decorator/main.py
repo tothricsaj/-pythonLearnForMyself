@@ -23,7 +23,19 @@ def star_decorator(count_of_stars):
         return wrapper
     return wrapped_func
 
+def percent_decorator(count_of_percent):
+    def wrapper(func):
+        def wrapped_func(*args, **kwargs):
+            print('%' * count_of_percent)
+            func(*args, **kwargs)
+            print('%' * count_of_percent)
+            
+        return wrapped_func
+    return wrapper
 
+
+
+@percent_decorator(40)
 @star_decorator(40)
 def plot_txt(txt):
     print(txt)
@@ -32,6 +44,5 @@ def plot_txt(txt):
 if __name__ == '__main__':
     print('hello decorator!!!\n')
     
-    print(add(1,3))
 
     plot_txt('Hello Decorator!!!!')
