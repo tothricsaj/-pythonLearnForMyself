@@ -13,8 +13,13 @@ class Dog(Animal):
         print('It is a dog')
 
 class Cat(Animal):
+    
+    def say_hello(self, msg):
+        print('Hey my friend!!! I am a sensitive cat......{}'.format(msg))
+
     def say_hello(self):
         print('Meow....meow')
+
 
     def type(self):
         print('It is a cat')
@@ -28,6 +33,10 @@ if __name__ == '__main__':
 
     for animal in (dog, cat):
         animal.say_hello()
+
+    print('\n\n')
+
+    cat.say_hello('and I am so hungry')
 
     
 
