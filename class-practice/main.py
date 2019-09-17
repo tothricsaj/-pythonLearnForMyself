@@ -73,6 +73,7 @@ if __name__ == "__main__":
     per2.my_class_method('per2')
 
     Teacher.my_static_method()
+    Teacher.my_class_method('Cha-Cha')
 
     print('\n')
 
