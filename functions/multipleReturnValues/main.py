@@ -16,6 +16,8 @@ if __name__ == "__main__":
     print(f.str)
     print(f.integer)
 
+    print(f.__dict__)
+
     print('\n')
 
     ############################################
