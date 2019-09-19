@@ -27,3 +27,26 @@ if __name__ == "__main__":
     str, integer = tuple_func()
     print(str)
     print(integer)
+
+    print('\n')
+
+    ############################################
+    # using dictionary ----------->
+
+    def dic_func():
+        d = dict()
+        d['str'] = 'Dictionary String'
+        d['x'] = 2323
+
+        return d
+
+    d = dic_func()
+    print(d)
+    print(d["str"])
+    print(d["x"])
+
+    print('\n')
+
+    ############################################
+
+
