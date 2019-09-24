@@ -1,10 +1,11 @@
 def outerFunc(txt):
-    def innerFunc():
-        print(txt)
+    def innerFunc(iTxt):
+        print(txt + " " + iTxt)
 
-    innerFunc()
+    return innerFunc
 
 if __name__ == '__main__':
     print('hello closure!!!\n')
 
-    outerFunc('hey!!!')
+    my_func = outerFunc('hey!!!')
+    my_func('honyDucky')
