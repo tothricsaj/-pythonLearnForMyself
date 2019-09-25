@@ -22,7 +22,7 @@ class MeatEater():
 class Dog(Animal, MeatEater):
     def __init__(self, name, dog_type, favorite_food):
         super().__init__(name)
-        super().__init__(favorite_food)
+        MeatEater.__init__(self, favorite_food)
         self.dog_type = dog_type
 
     def say_name(self):
