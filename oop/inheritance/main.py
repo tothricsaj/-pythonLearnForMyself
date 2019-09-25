@@ -11,8 +11,11 @@ class Dog(Animal):
         self.dog_type = dog_type
 
     def say_name(self):
-        super().say_name()
         print('woff, woff I am {}'.format(self.name))
+
+    def say_type(self):
+        print('My type is {}'.format(self.dog_type))
+        super().say_name()
 
 
 if __name__ == '__main__':
@@ -21,3 +24,4 @@ if __name__ == '__main__':
     dog = Dog('Fluffy', 'terrier')
 
     dog.say_name()
+    dog.say_type()
