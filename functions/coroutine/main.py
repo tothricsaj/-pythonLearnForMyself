@@ -13,3 +13,13 @@ if __name__ == '__main__':
     corou = print_name('Dear')
 
     corou.__next__()
+
+    corou.send('Ricsi')
+    corou.send('Dear Ricsi')
+    corou.send('Dear Python')
+    corou.send('Evil Java')
+    corou.send('Pikaaboo')
+    corou.send('Dear JavaScript')
+    corou.send('Dear JavaScript')
+
+
