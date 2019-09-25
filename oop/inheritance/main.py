@@ -1,13 +1,28 @@
 class Animal():
+
+    animals_secret = 'We can talk...mostly the ducks....'
+
     def __init__(self, name):
         self.name = name
 
     def say_name(self):
         print('Hi, my name is {}!'.format(self.name))
 
-class Dog(Animal):
-    def __init__(self, name, dog_type):
+
+
+class MeatEater():
+    def __init__(self, favorite_food):
+        print('One of the MeatEater was created....we are everywhere...')
+        self.favorite_food = favorite_food
+
+    def say_favorite_food(self):
+        print('My favorite_food is {}'.format(self.favorite_food))
+
+
+class Dog(Animal, MeatEater):
+    def __init__(self, name, dog_type, favorite_food):
         super().__init__(name)
+        super().__init__(favorite_food)
         self.dog_type = dog_type
 
     def say_name(self):
@@ -21,7 +36,11 @@ class Dog(Animal):
 if __name__ == '__main__':
     print('Hello inheritance!\n')
 
-    dog = Dog('Fluffy', 'terrier')
+    dog = Dog('Fluffy', 'terrier', 'cats')
 
     dog.say_name()
     dog.say_type()
+
+    print(dog.animals_secret)
+    
+    dog.say_favorite_food()
